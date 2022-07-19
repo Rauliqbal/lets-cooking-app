@@ -11,7 +11,7 @@
 
 @layer components {
     .recipe_title {
-        @apply text-sm font-semibold overflow-hidden;
+        @apply text-base font-semibold overflow-hidden;
 
         display: -webkit-box ;
         -webkit-line-clamp: 2;

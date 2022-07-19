@@ -16,9 +16,9 @@
     </div>
 
     <div class="px-5">
-      <h2 class="recipe_title h-[60px]">{{ recipe.title }}</h2>
+      <h2 class="recipe_title h-[50px]">{{ recipe.title }}</h2>
       <h3>{{}}</h3>
-      <div class="flex items-center justify-center gap-6 mt-6">
+      <div class="flex items-center justify-center gap-6 mt-4">
         <div
           class="flex-col flex items-center justify-center bg-green-100 w-24 h-24 rounded-xl"
         >
@@ -46,9 +46,10 @@
           }}</span>
         </div>
       </div>
-      <p class="text-base text-gray-500 leading-relaxed mt-6">
-        {{ recipe.needItem }}
-      </p>
+
+      <h3 class="text-lg font-bold mt-4 mb-2">Bahan - Bahan :</h3>      
+      <Ingredient/>
+      
     </div>
   </div>
 </template>
@@ -56,9 +57,10 @@
 <script>
 import axios from "axios";
 import PageLoader from "../components/PageLoader.vue";
+import Ingredient from "../components/detail/Ingredient.vue";
 
 export default {
-  components: { PageLoader },
+  components: { PageLoader, Ingredient },
   data() {
     return {
       recipe: [],
