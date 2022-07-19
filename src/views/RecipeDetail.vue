@@ -17,37 +17,37 @@
 
     <div class="px-5">
       <h2 class="recipe_title h-[50px]">{{ recipe.title }}</h2>
-      <h3>{{}}</h3>
+      <h3>By Bunda iRaa</h3>
       <div class="flex items-center justify-center gap-6 mt-4">
         <div
-          class="flex-col flex items-center justify-center bg-green-100 w-24 h-24 rounded-xl"
+          class="flex-col flex items-center justify-evenly bg-green-100 w-20 h-20 rounded-xl"
         >
-          <i class="bx bx-time-five text-green-500 text-5xl"></i>
-          <span class="text-sm text-green-500 mt-1 font-semibold">{{
+          <i class="bx bx-time-five text-green-500 text-3xl"></i>
+          <span class="text-[12px] text-green-500 mt-1 font-semibold">{{
             recipe.times
           }}</span>
         </div>
 
         <div
-          class="flex-col flex items-center justify-center bg-blue-100 w-24 h-24 rounded-xl"
+          class="flex-col flex items-center justify-evenly bg-blue-100 w-20 h-20 rounded-xl"
         >
-          <i class="bx bx-food-menu text-blue-500 text-5xl"></i>
-          <span class="text-sm text-blue-500 mt-1 font-semibold">{{
+          <i class="bx bx-food-menu text-blue-500 text-3xl"></i>
+          <span class="text-[12px] text-blue-500 mt-1 font-semibold">{{
             recipe.dificulty
           }}</span>
         </div>
 
         <div
-          class="flex-col flex items-center justify-center bg-orange-100 w-24 h-24 rounded-xl"
+          class="flex-col flex items-center justify-evenly bg-orange-100 w-20 h-20 rounded-xl"
         >
-          <i class="bx bx-bowl-rice text-orange-500 text-5xl"></i>
-          <span class="text-sm text-orange-500 mt-1 font-semibold">{{
+          <i class="bx bx-bowl-rice text-orange-500 text-3xl"></i>
+          <span class="text-[12px] text-orange-500 mt-1 font-semibold">{{
             recipe.servings
           }}</span>
         </div>
       </div>
 
-      <h3 class="text-lg font-bold mt-4 mb-2">Bahan - Bahan :</h3>      
+      <h3 class="text-xl font-bold mt-4 mb-2">Bahan - Bahan :</h3>      
       <Ingredient/>
       
     </div>
