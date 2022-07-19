@@ -38,8 +38,10 @@
 
 <script>
 import axios from 'axios'
+import PageLoader from '../components/PageLoader.vue'
 
 export default {
+    components:{PageLoader},
     data() {
         return {
             recipe: [],
