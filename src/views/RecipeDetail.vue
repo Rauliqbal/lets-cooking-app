@@ -11,21 +11,21 @@
         
 
        <div class="px-5">
-            <h2 class="recipe_title text-xl h-[60px]">{{recipe.title}}</h2>
+            <h2 class="recipe_title h-[60px]">{{recipe.title}}</h2>
             <h3>{{}}</h3>
-            <div class="flex items-center justify-center gap-8 mt-6">
+            <div class="flex items-center justify-center gap-6 mt-6">
 
-                <div class="flex-col flex items-center justify-center bg-green-100 w-28 h-28 rounded-xl">
+                <div class="flex-col flex items-center justify-center bg-green-100 w-24 h-24 rounded-xl">
                          <i class="bx bx-time-five text-green-500 text-5xl"></i>
                          <span class="text-sm text-green-500 mt-1 font-semibold">{{recipe.times}}</span>
                 </div>
 
-                <div class="flex-col flex items-center justify-center bg-blue-100 w-28 h-28 rounded-xl">
+                <div class="flex-col flex items-center justify-center bg-blue-100 w-24 h-24 rounded-xl">
                          <i class="bx bx-food-menu text-blue-500 text-5xl"></i>
                          <span class="text-sm text-blue-500 mt-1 font-semibold">{{recipe.dificulty}}</span>
                 </div>
 
-                <div class="flex-col flex items-center justify-center bg-orange-100 w-28 h-28 rounded-xl">
+                <div class="flex-col flex items-center justify-center bg-orange-100 w-24 h-24 rounded-xl">
                          <i class="bx bx-bowl-rice text-orange-500 text-5xl"></i>
                          <span class="text-sm text-orange-500 mt-1 font-semibold">{{recipe.servings}}</span>
                 </div>

@@ -13,9 +13,19 @@
 
     <div class="px-5 mt-14 min-h-screen">
       <h2 class="text-xl font-bold">Resep Terbaru</h2>
-      <div class="grid grid-cols-1 gap-4 mt-4">
-        <RecipeCard/>
-      </div>
+
+      <Suspense>
+        <template #default>
+          <div class="grid grid-cols-1 gap-4 mt-4">
+            <RecipeCard/>
+          </div>
+        </template>
+
+        <template #fallback>
+          sabar
+          
+        </template>
+      </Suspense>
     </div>
   </div>
 </template>
@@ -23,11 +33,12 @@
 <script>
 import axios from 'axios';
 import RecipeCard from '../components/RecipeCard.vue';
+import RecipeCardSkeleton from '../components/RecipeCardSkeleton.vue';
 
 export default {
   name: 'HomeView',
   components: {
-    RecipeCard
+    RecipeCard,RecipeCardSkeleton
   },
 
   
