@@ -12,22 +12,29 @@ const routes = [
     name: 'recipe',
     component: () => import('../views/RecipeView.vue')
   },
+  {
+    path:'/artikel',
+    name: "ArtikelView",
+    component: () => import('../views/ArtikelView.vue')
+  },
+  {
+    path:'/category/recipes/:key',
+    name: "CategoryView",
+    component: () => import('../views/CategoryView.vue')
+  },
   
   {
     path:'/recipe/:key',
     name: "recipeDetail",
     component: () => import('../views/RecipeDetail.vue')
   },
-  {
-    path:'/category/recipes/:key',
-    name: "CategoryView",
-    component: () => import('../views/CategoryView.vue')
-  }
+  
 ]
 
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
-  routes
+  routes,
+  linkActiveClass: 'active',
 })
 
 export default router

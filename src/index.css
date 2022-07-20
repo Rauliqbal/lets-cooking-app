@@ -18,4 +18,12 @@
         -webkit-box-orient: vertical;
     }
 
+    .nav-link {
+        @apply flex flex-col items-center justify-center text-gray-400 font-semibold
+    }
+
+    .active-link {
+        @apply  text-red-400 
+    }
+
 }

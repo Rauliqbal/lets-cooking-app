@@ -15,7 +15,7 @@
       <h2 class="text-xl font-bold">Kategori</h2>
       <CategoryCard class="mt-4"/>
       <h2 class="text-xl font-bold mt-5">Resep Terbaru</h2>
-      <div class="grid grid-cols-1 gap-4 mt-4">
+      <div class="grid grid-cols-1 gap-4 mt-4 pb-20">
         <RecipeCard/>
       </div>
     </div>
