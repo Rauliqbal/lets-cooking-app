@@ -1,9 +1,10 @@
 <template>
   <div class="max-w-md bg-[#f1f1f1] mx-auto">
-    <nav>
-    <!-- <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> -->
-  </nav>
+    <nav class="fixed inset-x-0 bottom-0 bg-white">
+      <router-link to="/">Home</router-link>
+      <router-link to="/recipe">About</router-link>
+      <router-link to="/artikel">artikel</router-link>
+    </nav>
 
   <PageLoader/>
    <router-view v-slot="{ Component }">

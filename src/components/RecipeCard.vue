@@ -7,7 +7,7 @@
   >
     <div class="p-3 flex items-center">
       <img
-        class="rounded-lg w-20 h-20 object-cover"
+        class="rounded-lg w-24 h-28 object-cover"
         :src="recipe.thumb"
         :alt="'photo ' + recipe.title"
       />

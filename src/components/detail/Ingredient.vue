@@ -1,22 +1,8 @@
 <template>
-    <div>
-      <ul>
-        <li class="text-sm text-gray-500 py-[2px]">{{recipe[0]}}</li>
-        <li class="text-sm text-gray-500 py-[2px]">{{recipe[1]}}</li>
-        <li class="text-sm text-gray-500 py-[2px]">{{recipe[2]}}</li>
-        <li class="text-sm text-gray-500 py-[2px]">{{recipe[3]}}</li>
-        <li class="text-sm text-gray-500 py-[2px]">{{recipe[4]}}</li>
-        <li class="text-sm text-gray-500 py-[2px]">{{recipe[5]}}</li>
-        <li class="text-sm text-gray-500 py-[2px]">{{recipe[6]}}</li>
-        <li class="text-sm text-gray-500 py-[2px]">{{recipe[7]}}</li>
-        <li class="text-sm text-gray-500 py-[2px]">{{recipe[8]}}</li>
-        <li class="text-sm text-gray-500 py-[2px]">{{recipe[9]}}</li>
-        <li class="text-sm text-gray-500 py-[2px]">{{recipe[10]}}</li>
-        <li class="text-sm text-gray-500 py-[2px]">{{recipe[11]}}</li>
-        <li class="text-sm text-gray-500 py-[2px]">{{recipe[12]}}</li>
-        <li class="text-sm text-gray-500 py-[2px]">{{recipe[13]}}</li>
-        <li class="text-sm text-gray-500 py-[2px]">{{recipe[14]}}</li>
-        <li class="text-sm text-gray-500 py-[2px]">{{recipe[15]}}</li>
+    <div class="px-5">
+      <ul class="list-disc" v-for="recipe in recipes" :key="recipe.id">
+        <li class="text-sm text-gray-500 py-[2px]">{{recipe}}</li>
+        
       </ul>
     </div>
 </template>
@@ -27,12 +13,12 @@ import axios from "axios";
 export default {
     data() {
     return {
-      recipe: [],
+      recipes: [],
     };
   },
   methods: {
-    setRecipe(data) {
-      this.recipe = data;
+    setRecipes(data) {
+      this.recipes = data;
     },
   },
   mounted() {
@@ -41,7 +27,7 @@ export default {
         "https://masak-apa-tomorisakura.vercel.app/api/recipe/" +
           this.$route.params.key
       )
-      .then((response) => this.setRecipe(response.data.results.ingredient))
+      .then((response) => this.setRecipes(response.data.results.ingredient))
       .catch((error) => console.log(error));
   },
 }
