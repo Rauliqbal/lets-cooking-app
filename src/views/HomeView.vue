@@ -5,7 +5,7 @@
       <h1 class="font-bold text-2xl text-white">Hi, Cooking Lovers!</h1>
       <h2 class="text-white text-base">Mau masak apa hari ini</h2>
 
-      <router-link to="/recipe" class="flex items-center relative  mt-6">
+      <router-link to="/search" class="flex items-center relative  mt-6">
         <input class="w-full py-3 pl-3 rounded-xl outline-none" type="search" placeholder="search recipe...">
         <i class='bx bx-search absolute right-3  text-2xl'></i>
       </router-link>

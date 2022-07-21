@@ -49,6 +49,7 @@
 
       <h3 class="text-xl font-bold mt-4 mb-2">Bahan - Bahan :</h3>      
       <Ingredient/>
+      <Step/>
       
     </div>
   </div>
@@ -58,9 +59,10 @@
 import axios from "axios";
 import PageLoader from "../components/PageLoader.vue";
 import Ingredient from "../components/detail/Ingredient.vue";
+import Step from "../components/detail/Step.vue";
 
 export default {
-  components: { PageLoader, Ingredient },
+  components: { PageLoader, Ingredient, Step },
   data() {
     return {
       recipe: [],

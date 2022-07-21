@@ -10,19 +10,8 @@
 
             <h3 class="text-lg font-bold text-center text-gray-900">Resep</h3>
         </div>
-        <div class="flex items-center relative mt-2">
-            <input
-                class="w-full py-3 pl-3 rounded-xl outline-none"
-                name="search"
-                type="search"
-                v-model="search"
-                @keyup="searchRecipe"
-                placeholder="search recipe..."
-            />
-            <i class="bx bx-search absolute right-3 text-2xl"></i>
-        </div>
 
-        <div class="grid grid-cols-1 gap-4 mt-4 pb-20">
+        <div class="grid grid-cols-1 gap-4 mt-2 pb-20">
             <div v-for="recipe in recipes" :key="recipe.id">
                 <RecipeCard :recipe="recipe"/>
             </div>
@@ -83,7 +72,7 @@ export default {
     },
     mounted() {
         axios 
-             .get("https://masak-apa-tomorisakura.vercel.app/api/recipes")
+             .get("https://masak-apa-tomorisakura.vercel.app/api/recipes/1")
                 .then((response) => this.setRecipes(response.data.results))
                 .catch((error) => console.log(error));
     }
