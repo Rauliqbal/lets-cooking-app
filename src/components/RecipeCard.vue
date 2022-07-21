@@ -1,9 +1,8 @@
 <template>
-  <router-link
+  <div class="bg-white rounded-xl">
+    <router-link
     :to="'/recipe/' + recipe.key"
-    class="bg-white rounded-xl"
-    v-for="recipe in recipes"
-    :key="recipe.id"
+    
   >
     <div class="p-3 flex items-center">
       <img
@@ -26,27 +25,13 @@
       </div>
     </div>
   </router-link>
+  </div>
 </template>
 
 <script>
 import axios from "axios";
 
 export default {
-  data() {
-    return {
-      recipes: [],
-    };
-  },
-  methods: {
-    setRecipes(data) {
-      this.recipes = data;
-    },
-  },
-  mounted() {
-    axios
-      .get("https://masak-apa-tomorisakura.vercel.app/api/recipes")
-      .then((response) => this.setRecipes(response.data.results))
-      .catch((error) => console.log(error));
-  },
+  props: ['recipe']
 };
 </script>
