@@ -16,7 +16,7 @@
         <div class="grid grid-cols-1 gap-4 mt-4 pb-4">
             <router-link
             :to="'/recipe/' + recipe.key"
-            class="bg-white rounded-xl"
+            class="bg-[#f1f1f1] rounded-xl"
             v-for="recipe in recipes"
             :key="recipe.id"
         >

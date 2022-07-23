@@ -1,34 +1,30 @@
 <template>
-    <div class="px-5">
-      <ul v-for="recipe in recipes" :key="recipe.id">
-        <li class="text-sm text-gray-500 py-[2px]">{{recipe}}</li>
-        
+   <div>
+      <ul class="list-decimal">
+         <li v-for="recipe in recipes" :key="recipe.id" class="text-base text-gray-500 py-2 marker:text-red-400 marker:text-xl marker:font-medium">{{ recipe.slice(1) }}</li>
       </ul>
-    </div>
+   </div>
 </template>
 
 <script>
 import axios from "axios";
 
 export default {
-    data() {
-    return {
-      recipes: [],
-    };
-  },
-  methods: {
-    setRecipes(data) {
-      this.recipes = data;
-    },
-  },
-  mounted() {
-    axios
-      .get(
-        "https://masak-apa-tomorisakura.vercel.app/api/recipe/" +
-          this.$route.params.key
-      )
-      .then((response) => this.setRecipes(response.data.results.step))
-      .catch((error) => console.log(error));
-  },
-}
+   data() {
+      return {
+         recipes: [],
+      };
+   },
+   methods: {
+      setRecipes(data) {
+         this.recipes = data;
+      },
+   },
+   mounted() {
+      axios
+         .get("https://masak-apa-tomorisakura.vercel.app/api/recipe/" + this.$route.params.key)
+         .then((response) => this.setRecipes(response.data.results.step))
+         .catch((error) => console.log(error));
+   },
+};
 </script>

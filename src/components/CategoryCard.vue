@@ -10,7 +10,7 @@
     
   >
     <swiper-slide v-for="category in categorys" :key="category.id" style="width:100px;">
-        <router-link :to="'/category/recipes/' + category.key" class="flex items-center justify-center h-12 text-gray-400 bg-white hover:bg-[#FFAAA0] hover:text-white rounded-xl px-4 transition duration-300 ease-out">
+        <router-link :to="'/category/recipes/' + category.key" class="flex items-center justify-center h-12 text-gray-400 bg-[#f1f1f1] hover:bg-[#FFAAA0] hover:text-white rounded-xl px-4 transition duration-300 ease-out">
             <h5 class=" text-[10px] font-semibold text-center">{{category.category}}</h5>
         </router-link>
     </swiper-slide>

@@ -1,5 +1,5 @@
 <template>
-  <div class="max-w-md bg-[#f1f1f1] mx-auto">
+  <div class="max-w-md mx-auto">
     <PageLoader />
     <router-view v-slot="{ Component }">
       <transition name="route" mode="out-in">

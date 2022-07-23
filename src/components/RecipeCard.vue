@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white rounded-xl">
+  <div class="bg-[#f1f1f1] rounded-xl">
     <router-link
     :to="'/recipe/' + recipe.key"
     

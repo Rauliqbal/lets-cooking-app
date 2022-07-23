@@ -1,8 +1,6 @@
 <template>
    <div>
-      <ul class="list-disc">
-         <li v-for="recipe in recipes" :key="recipe.id" class="text-base text-gray-500 py-1 marker:text-red-400 marker:text-xl">{{ recipe }}</li>
-      </ul>
+      <h4 class="text-sm text-gray-500">By {{ authors }}</h4>
    </div>
 </template>
 
@@ -12,18 +10,18 @@ import axios from "axios";
 export default {
    data() {
       return {
-         recipes: [],
+         authors: [],
       };
    },
    methods: {
-      setRecipes(data) {
-         this.recipes = data;
+      setAuthor(data) {
+         this.authors = data;
       },
    },
    mounted() {
       axios
          .get("https://masak-apa-tomorisakura.vercel.app/api/recipe/" + this.$route.params.key)
-         .then((response) => this.setRecipes(response.data.results.ingredient))
+         .then((response) => this.setAuthor(response.data.results.author.user))
          .catch((error) => console.log(error));
    },
 };

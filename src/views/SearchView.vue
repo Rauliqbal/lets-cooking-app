@@ -1,6 +1,8 @@
 <template>
-    <div class="px-5 min-h-screen">
-        <div class="grid grid-cols-3 items-center py-4">
+    <div class="min-h-screen">
+        <img class="w-full -mt-[120px]" src="../assets/images/bg-image.svg">
+
+        <div class="grid grid-cols-3 items-center py-4 px-5 -mt-[184px]">
             <router-link
                 to="/"
                 class="w-10 h-10 flex items-center justify-center rounded-md bg-white"
@@ -8,55 +10,55 @@
                 <i class="bx bx-chevron-left text-3xl text-[#FF9F95]"></i>
             </router-link>
 
-            <h3 class="text-lg font-bold text-center text-gray-900">Resep</h3>
+            <h3 class="text-lg font-bold text-center text-white">Resep</h3>
         </div>
-        <form class="flex items-center relative mt-2" @submit.prevent="getData">
-            <input
+
+        <div class="px-5">
+            <form class="flex items-center relative mt-2" @submit.prevent="getData">
+                <input
                 class="w-full py-3 pl-3 rounded-xl outline-none"
                 name="search"
                 type="search"
                 v-model="query"
                 @keyup="searcRecipe"
                 placeholder="search recipe..."
-            />
-            <i class="bx bx-search absolute right-3 text-2xl"></i>
-        </form>
+                />
+                <i class="bx bx-search absolute right-3 text-2xl text-gray-400"></i>
+            </form>
 
-        <div
-            class="grid grid-cols-1 gap-4 mt-4 pb-20"
-        >
-            <div v-for="recipe in data"
-            :key="recipe.id">
-                <router-link :to="'/recipe/' + recipe.key">
-                <div class="p-3 bg-white rounded-xl flex items-center">
-                    <img
-                        class="rounded-lg w-24 h-28 object-cover"
-                        :src="recipe.thumb"
-                        :alt="'photo ' + recipe.title"
-                    />
-                    <div class="py-2 pl-3">
-                        <h2 class="recipe_title">{{ recipe.title }}</h2>
-                        <div class="flex mt-4">
-                            <div class="w-[86px] flex items-center gap-1">
-                                <i
-                                    class="bx bx-time-five text-green-500 text-lg"
-                                ></i>
-                                <span class="text-[10px]">{{
-                                    recipe.times
-                                }}</span>
-                            </div>
-                            <div class="flex items-center gap-1">
-                                <i
-                                    class="bx bx-food-menu text-orange-400 text-lg"
-                                ></i>
-                                <span class="text-[10px]">{{
-                                    recipe.dificulty
-                                }}</span>
+            <div class="grid grid-cols-1 gap-4 mt-12 pb-20">
+                <div v-for="recipe in data" :key="recipe.id">
+                    <router-link :to="'/recipe/' + recipe.key">
+                        <div class="p-3 bg-[#f1f1f1] rounded-xl flex items-center">
+                            <img
+                                class="rounded-lg w-24 h-28 object-cover"
+                                :src="recipe.thumb"
+                                :alt="'photo ' + recipe.title"
+                            />
+                            <div class="py-2 pl-3">
+                                <h2 class="recipe_title">{{ recipe.title }}</h2>
+                                <div class="flex mt-4">
+                                    <div class="w-[86px] flex items-center gap-1">
+                                        <i
+                                            class="bx bx-time-five text-green-500 text-lg"
+                                        ></i>
+                                        <span class="text-[10px]">{{
+                                            recipe.times
+                                        }}</span>
+                                    </div>
+                                    <div class="flex items-center gap-1">
+                                        <i
+                                            class="bx bx-food-menu text-orange-400 text-lg"
+                                        ></i>
+                                        <span class="text-[10px]">{{
+                                            recipe.dificulty
+                                        }}</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </router-link>
                 </div>
-            </router-link>
             </div>
         </div>
     </div>

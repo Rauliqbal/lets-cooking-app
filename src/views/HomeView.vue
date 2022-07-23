@@ -7,7 +7,7 @@
 
       <router-link to="/search" class="flex items-center relative  mt-6">
         <input class="w-full py-3 pl-3 rounded-xl outline-none" type="search" placeholder="search recipe...">
-        <i class='bx bx-search absolute right-3  text-2xl'></i>
+        <i class='bx bx-search absolute right-3 text-gray-400 text-2xl'></i>
       </router-link>
     </div>
 
