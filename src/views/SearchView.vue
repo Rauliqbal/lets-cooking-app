@@ -1,6 +1,6 @@
 <template>
     <div class="min-h-screen">
-        <img class="h-[298px] w-full object-cover -mt-[120px]" src="../assets/images/bg-image.svg">
+        <img class="h-[298px] w-full object-cover -mt-[107px]" src="../assets/images/bg-image.svg">
 
         <div class="grid grid-cols-3 items-center py-4 px-5 -mt-[184px]">
             <router-link

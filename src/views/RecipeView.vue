@@ -1,21 +1,21 @@
 <template>
     <div class="px-5 min-h-screen">
-        <div class="fixed inset-x-0 max-w-md mx-auto -mt-[154px]">
-            <img class="h-[298px] w-full object-cover -mt-[154px]" src="../assets/images/bg-image.svg">
+        <div class="fixed inset-x-0 max-w-md mx-auto -mt-[130px]">
+            <img class="h-[298px] w-full object-cover -mt-[162px]" src="../assets/images/bg-image.svg">
 
-        <div class="grid grid-cols-3 items-center py-4 px-5 -mt-[122px]">
-            <router-link
-                to="/"
-                class="w-10 h-10 flex items-center justify-center rounded-md bg-white"
-            >
-                <i class="bx bx-chevron-left text-3xl text-[#FF9F95]"></i>
-            </router-link>
+            <div class="grid grid-cols-3 items-center py-4 px-5 -mt-[111px]">
+                <router-link
+                    to="/"
+                    class="w-10 h-10 flex items-center justify-center rounded-md bg-white"
+                >
+                    <i class="bx bx-chevron-left text-3xl text-[#FF9F95]"></i>
+                </router-link>
 
-            <h3 class="text-lg font-bold text-center text-white">Resep</h3>
+                <h3 class="text-lg font-bold text-center text-white">Resep</h3>
+            </div>
         </div>
-        </div>
 
-        <div class="grid grid-cols-1 gap-4 mt-32 pb-20">
+        <div class="grid grid-cols-1 gap-4 mt-28 pb-20">
             <div v-for="recipe in recipes" :key="recipe.id">
                 <RecipeCard :recipe="recipe"/>
             </div>
