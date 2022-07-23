@@ -1,6 +1,6 @@
 <template>
     <div class="min-h-screen">
-        <img class="w-full -mt-[120px]" src="../assets/images/bg-image.svg">
+        <img class="h-[298px] w-full object-cover -mt-[120px]" src="../assets/images/bg-image.svg">
 
         <div class="grid grid-cols-3 items-center py-4 px-5 -mt-[184px]">
             <router-link
@@ -16,7 +16,7 @@
         <div class="px-5">
             <form class="flex items-center relative mt-2" @submit.prevent="getData">
                 <input
-                class="w-full py-3 pl-3 rounded-xl outline-none"
+                class="w-full py-3 pl-3 pr-8 rounded-xl outline-none"
                 name="search"
                 type="search"
                 v-model="query"

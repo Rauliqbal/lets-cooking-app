@@ -1,7 +1,7 @@
 <template>
     <div class="px-5 min-h-screen">
         <div class="fixed inset-x-0 max-w-md mx-auto -mt-[154px]">
-            <img class="w-full -mt-[154px]" src="../assets/images/bg-image.svg">
+            <img class="h-[298px] w-full object-cover -mt-[154px]" src="../assets/images/bg-image.svg">
 
         <div class="grid grid-cols-3 items-center py-4 px-5 -mt-[122px]">
             <router-link
