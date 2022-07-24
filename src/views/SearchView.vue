@@ -17,18 +17,17 @@
             <form class="flex items-center relative mt-2" @submit.prevent="getData">
                 <input
                 class="w-full py-3 pl-3 pr-8 rounded-xl outline-none"
-                name="search"
-                type="search"
+                type="text"
                 v-model="query"
                 @keyup="searcRecipe"
-                placeholder="search recipe..."
+                placeholder="Telor, Nasi Goreng, Daging"
                 />
                 <i class="bx bx-search absolute right-3 text-2xl text-gray-400"></i>
             </form>
 
             <div class="grid grid-cols-1 gap-4 mt-12 pb-20">
-                <div v-for="recipe in data" :key="recipe.id">
-                    <router-link :to="'/recipe/' + recipe.key">
+                <div v-if="data.length > 0">
+                    <router-link :to="'/recipe/' + recipe.key"  v-for="recipe in data" :key="recipe.id" >
                         <div class="p-3 bg-[#f1f1f1] rounded-xl flex items-center">
                             <img
                                 class="rounded-lg w-24 h-28 object-cover"
@@ -59,6 +58,8 @@
                         </div>
                     </router-link>
                 </div>
+
+                <div v-else>tidak</div>
             </div>
         </div>
     </div>

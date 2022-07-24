@@ -17,7 +17,7 @@ export default {
 </script>
 
 <style>
-/* .route-enter-from {
+.route-enter-from {
   opacity: 0;
   transform: translateX(100px);
 }
@@ -30,5 +30,5 @@ export default {
 }
 .route-leave-active {
   transition: all 0.3s ease-in;
-} */
+}
 </style>

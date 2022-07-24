@@ -5,9 +5,12 @@
       <h1 class="font-bold text-2xl text-white">Hi, Cooking Lovers!</h1>
       <h2 class="text-white text-base">Mau masak apa hari ini</h2>
 
-      <router-link to="/search" class="flex items-center relative  mt-6">
-        <input class="w-full py-3 pl-3 rounded-xl outline-none" type="search" placeholder="search recipe...">
+      <router-link to="/search">
+        <div class="
+        flex items-center relative bg-white py-3 rounded-xl mt-5">
+          <span class="px-3 text-base text-gray-400">Telor, Nasi Goreng, Daging</span>
         <i class='bx bx-search absolute right-3 text-gray-400 text-2xl'></i>
+        </div>
       </router-link>
     </div>
 

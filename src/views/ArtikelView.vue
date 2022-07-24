@@ -1,33 +1,28 @@
 <template>
-    <div>
-        <div
-            class="h-screen w-full flex flex-col justify-center items-center bg-[#1A2238]"
-        >
-            <h1 class="text-9xl font-extrabold text-white tracking-widest">
-                404
-            </h1>
-            <div class="bg-[#FF6A3D] px-2 text-sm rounded rotate-12 absolute">
-                Page Not Found
-            </div>
-            <button class="mt-5">
-                <a
-                    class="relative inline-block text-sm font-medium text-[#FF6A3D] group active:text-orange-500 focus:outline-none focus:ring"
-                >
-                    <span
-                        class="absolute inset-0 transition-transform translate-x-0.5 translate-y-0.5 bg-[#FF6A3D] group-hover:translate-y-0 group-hover:translate-x-0"
-                    ></span>
+    <div class="px-5 min-h-screen">
+        <div class="fixed inset-x-0 max-w-md mx-auto -mt-[130px] z-50">
+            <img class="h-[298px] w-full object-cover -mt-[162px]" src="../assets/images/bg-image.svg">
 
-                    <span
-                        class="relative block px-8 py-3 bg-[#1A2238] border border-current"
-                    >
-                        <router-link to="/">Go Home</router-link>
-                    </span>
-                </a>
-            </button>
+            <div class="grid grid-cols-3 items-center py-4 px-5 -mt-[111px]">
+                <router-link
+                    to="/"
+                    class="w-10 h-10 flex items-center justify-center rounded-md bg-white"
+                >
+                    <i class="bx bx-chevron-left text-3xl text-[#FF9F95]"></i>
+                </router-link>
+
+                <h3 class="text-lg font-bold text-center text-white">Artikel</h3>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 gap-5 mt-28 pb-20">
+            <div v-for="recipe in recipes" :key="recipe.id">
+                <ArtikelCard :recipe="recipe"/>
+            </div>
         </div>
 
         <nav
-            class="max-w-md mx-auto fixed inset-x-0 bottom-0 bg-white grid grid-cols-3 py-2"
+            class="max-w-md mx-auto fixed inset-x-0 bottom-0 bg-white grid grid-cols-3 py-2 z-50"
         >
             <router-link to="/" class="nav-link" active-class="active-link">
                 <i class="bx bx-home-alt text-2xl"></i>
@@ -54,7 +49,29 @@
 </template>
 
 <script>
-export default {};
+import axios from "axios"
+import ArtikelCard from "../components/ArtikelCard.vue";
+
+export default {
+    components: { ArtikelCard },
+
+    data() {
+        return {
+            recipes: [],
+        };
+    },
+
+    methods: {
+        setRecipes(data) {
+            this.recipes = data;
+        },
+    },
+    mounted() {
+        axios 
+             .get("https://api-lets-cook.herokuapp.com/artikels")
+                .then((response) => this.setRecipes(response.data))
+                .catch((error) => console.log(error));
+    }
+};
 </script>
 
-<style></style>
