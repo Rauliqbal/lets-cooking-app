@@ -1,17 +1,21 @@
 <template>
     <div class="px-5 min-h-screen">
-        <div class="grid grid-cols-3 items-center py-4">
-            <router-link
-                to="/"
-                class="w-10 h-10 flex items-center justify-center rounded-md bg-white"
-            >
-                <i class="bx bx-chevron-left text-3xl text-[#FF9F95]"></i>
-            </router-link>
+       <div class="fixed inset-x-0 max-w-md mx-auto -mt-[130px] z-50">
+            <img class="h-[298px] w-full object-cover -mt-[162px]" src="../assets/images/bg-image.svg">
 
-            <h3 class="text-lg font-bold text-center text-gray-900">Kategori </h3>
+            <div class="grid grid-cols-3 items-center py-4 px-5 -mt-[111px]">
+                <router-link
+                    to="/"
+                    class="w-10 h-10 flex items-center justify-center rounded-md bg-white"
+                >
+                    <i class="bx bx-chevron-left text-3xl text-[#FF9F95]"></i>
+                </router-link>
+
+                <h3 class="text-lg font-bold text-center text-white">Resep</h3>
+            </div>
         </div>
 
-        <CategoryCard @click="reloadPage" class="mt-2"/>
+        <CategoryCard @click="reloadPage" class="mt-28"/>
 
         <div class="grid grid-cols-1 gap-4 mt-4 pb-4">
             <router-link

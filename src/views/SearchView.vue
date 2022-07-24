@@ -25,8 +25,8 @@
                 <i class="bx bx-search absolute right-3 text-2xl text-gray-400"></i>
             </form>
 
-            <div class="grid grid-cols-1 gap-4 mt-12 pb-20">
-                <div v-if="data.length > 0">
+            <div>
+                <div class="grid grid-cols-1 gap-4 mt-16 pb-20" v-if="data.length > 0">
                     <router-link :to="'/recipe/' + recipe.key"  v-for="recipe in data" :key="recipe.id" >
                         <div class="p-3 bg-[#f1f1f1] rounded-xl flex items-center">
                             <img
@@ -59,7 +59,10 @@
                     </router-link>
                 </div>
 
-                <div v-else>tidak</div>
+                <div v-else class="text-center">
+                    <img class="w-80 mx-auto mt-16 mb-2" src="../assets/images/search.png" alt="">
+                    <span class="text-lg">Temukan resep masakan disini</span>
+                </div>
             </div>
         </div>
     </div>

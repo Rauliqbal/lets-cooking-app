@@ -15,14 +15,18 @@
             </div>
         </div>
 
-        <div class="grid grid-cols-1 gap-4 mt-28 pb-20">
+        <div class="grid grid-cols-1 gap-4 mt-28 pb-20" v-if="recipes.length > 0">
             <div v-for="recipe in recipes" :key="recipe.id">
                 <RecipeCard :recipe="recipe"/>
             </div>
         </div>
 
+        <div v-else>
+            <PageLoader/>
+        </div>
+
         <nav
-            class="max-w-md mx-auto fixed inset-x-0 bottom-0 bg-white grid grid-cols-3 py-2"
+            class="max-w-md mx-auto fixed inset-x-0 bottom-0 bg-white grid grid-cols-3 py-2 z-50"
         >
             <router-link to="/" class="nav-link" active-class="active-link">
                 <i class="bx bx-home-alt text-2xl"></i>
@@ -51,9 +55,10 @@
 <script>
 import axios from "axios"
 import RecipeCard from "../components/RecipeCard.vue";
+import PageLoader from "../components/PageLoader.vue"
 
 export default {
-    components: { RecipeCard },
+    components: { RecipeCard,PageLoader },
 
     data() {
         return {

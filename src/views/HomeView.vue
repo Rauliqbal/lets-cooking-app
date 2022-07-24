@@ -1,6 +1,45 @@
 <template>
-  <div>
+  <div class="relative">
     <img class="w-full " src="../assets/images/bg-image.svg" alt="">
+
+    <button @click="isOpen = true" class="absolute top-4 right-5 bg-white text-red-400 flex items-center justify-center w-10 h-10 rounded-full" ><i class='bx bx-info-circle text-2xl'></i></button>
+    <div
+        v-show="isOpen"
+        class="
+          z-50
+          fixed
+          inset-0
+          flex
+          items-center
+          justify-center
+          bg-gray-700 bg-opacity-50
+          h-screen
+          max-w-md
+          mx-auto
+          px-5
+          transition-all
+        "
+      >
+        <div class="max-w-2xl p-6 bg-white rounded-md shadow-xl transition-all">
+          <div class="flex items-center justify-between">
+            <h3 class="text-2xl font-semibold">Tentang Aplikasi</h3>
+          </div>
+          <div class="mt-4">
+            <p class="text-base text-gray-700">
+              Lets Cook adalah Aplikasi berbasis website untuk kalian ingin mencoba resep resep masakan indonesia yang mudah dan menyenangkan.
+            </p>
+            <p class="text-sm text-gray-700 mt-4 "><span class="text-gray-500">Version</span> : 1.0.0</p>
+            <p class="text-sm text-gray-700 mb-4"><span class="text-gray-500">Beta Release</span> : Minggu, 24 Juli 2022</p>
+            <button
+              @click="isOpen = false"
+              class="px-4 py-2 rounded-md bg-red-500 text-white hover:bg-red-700 focus:scale-95 transition duration-100 ease-out"
+            >
+              Keluar
+            </button>
+          </div>
+        </div>
+      </div>
+
     <div class="px-5 -mt-48">
       <h1 class="font-bold text-2xl text-white">Hi, Cooking Lovers!</h1>
       <h2 class="text-white text-base">Mau masak apa hari ini</h2>
@@ -56,6 +95,7 @@ export default {
         return {
             search: "",
             recipes: [],
+            isOpen: false
         };
     },
 
