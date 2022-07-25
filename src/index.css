@@ -26,4 +26,10 @@
         @apply  text-red-400 
     }
 
+    .paragraf {
+    @apply text-base text-gray-600 leading-relaxed mt-4}
+
+    .heading {
+    @apply text-xl text-gray-900 font-semibold mt-6}
+
 }

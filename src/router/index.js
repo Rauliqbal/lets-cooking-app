@@ -33,6 +33,10 @@ const routes = [
     name: "searchRecipe",
     component: () => import('../views/SearchView.vue')
   },
+  {
+    path:'/artikel/tingkat-kematangan-steak',
+    component: () => import('../views/artikel/KematanganSteak.vue')
+  },
   
 ]
 
