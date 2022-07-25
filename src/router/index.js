@@ -37,6 +37,10 @@ const routes = [
     path:'/artikel/tingkat-kematangan-steak',
     component: () => import('../views/artikel/KematanganSteak.vue')
   },
+  {
+    path:'/artikel/makanan-vitamin-d',
+    component: () => import('../views/artikel/MakananVitaminD.vue') 
+  },
   
 ]
 
